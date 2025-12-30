@@ -26,10 +26,12 @@ html,body{
 }
 
 body {
-  height: 100%;
+  height: 110%;
   width: 100%;
   font-family: var(--font-roboto);
-  background: #020024;
+  background: #780206;
+  background: -webkit-linear-gradient(
+  180deg,#050414 0%,#1a123d 30%,#3a2380 55%,#7b5fd9 75%,#e6dcff 100%);
   background: linear-gradient(
   180deg,#050414 0%,#1a123d 30%,#3a2380 55%,#7b5fd9 75%,#e6dcff 100%)
 }
@@ -118,7 +120,7 @@ h1 {
 
 .movie{
   width: 310px;
-  height: 460px;
+  /* height: 460px; */
   margin: 1.5rem;
   margin-top: 70px;
 
@@ -128,45 +130,54 @@ h1 {
   border: none;
 
   transition: all 0.4s cubic-bezier(0.175,0.885,0,1);
-  box-shadow: 0px 13px 100px -7px rgba(0, 0, 0, 0.1)
+ 
 }
 
-.movie div:nth-of-type(1) {
+.movieYear {
     position: absolute;
-    padding: 16px;
+    padding: 20px;
     width: 100%;
     opacity: 0;
     top: 0;
     color: #d5c6ff;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.842) 0%, rgba(0, 0, 0, 0.61) 50%, rgba(0, 0, 0, 0) 100%);
 }
 
 .movie:hover {
-    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 40px 30px rgba(0, 0, 0, 0.1);
     transform: scale(1.05, 1.05);
 }
 
 .movie div:nth-of-type(2) {
     width: 100%;
     height: 100%;
+    color: black;
 }
 
-.movie div:nth-of-type(2) img {
+.moviePoster img {
     height: 100%;
     width: 100%;
+    box-shadow: 0px 13px 100px -7px rgba(0, 0, 0, 0.1)
 }
 
-.movie div:nth-of-type(3) {
+/* .movie div:nth-of-type(3) {
     z-index: 2;
-    background-color: #343739;
+    background-color: transparent;
     padding: 16px 24px 24px 24px;
 
-    position: absolute;
+    /* 16px 24px 24px 24px */
+
+    /* position: absolute;
     bottom: 0;
     right: 0;
     left: 0;
+} */
+.movie-info{
+  padding: 5px;
+  margin-bottom: 15px;
+  background: transparent;
 }
-
-.movie div:nth-of-type(3) span {
+.movie-info span {
     font-family: "Raleway", sans-serif;
     text-transform: uppercase;
     font-size: 13px;
@@ -175,7 +186,7 @@ h1 {
     color: #ffffff;
 }
 
-.movie div:nth-of-type(3) h3 {
+.movie-info h3 {
     margin-top: 5px;
     font-family: "Roboto Slab", serif;
     color: #d1c0ff;
@@ -183,7 +194,8 @@ h1 {
 
 .movie:hover div:nth-of-type(2) {
     height: 100%;
-    opacity: 0.3;
+    /* opacity: 0.3; */
+    color: yellow;
 }
 
 .movie:hover div:nth-of-type(3) {
@@ -191,5 +203,44 @@ h1 {
 }
 
 .movie:hover div:nth-of-type(1) {
-    opacity: 1;
+    opacity: 100;
+}
+
+@media screen and (max-width: 600px) {
+    .app {
+        padding: 4rem 2rem;
+    }
+
+    .search {
+        padding: 1rem 1.75rem;
+        width: 100%;
+    }
+
+    .search input {
+        font-size: 1rem;
+    }
+
+    .search img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .app {
+        padding: 4rem 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        margin-top: 2rem;
+    }
+
+    .movie {
+        width: "100%";
+        margin: 1rem;
+    }
 }
