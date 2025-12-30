@@ -50,3 +50,16 @@ npm install
 ```bash
 npm run dev
 ```
+---
+
+## 📸 Preview
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c918194b-3dfd-4149-8490-7913c998af02" />
+
+---
+## 🔗 Connect With Me
+
+- 💼 LinkedIn: https://www.linkedin.com/in/aniruddha-tapase-117241378
+- 📸 Instagram: https://www.instagram.com/i_am_tapase
+- 💻 GitHub: https://github.com/ani-codes24
+
+
