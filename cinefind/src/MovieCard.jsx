@@ -1,17 +1,17 @@
-
-const MovieCard = ({movie}) => {
+import posterNA from './assets/poster-na.png'
+const MovieCard = ({movie: {imdbID, Year, Poster, Title, Type}}) => {
   return (
     <>
-    <div className='movie'>
+    <div className='movie' key={imdbID}>
         <div className="movieYear">
-            <p>{movie.Year}</p>
+            <p>{Year}</p>
         </div>
         <div className="moviePoster">
-            <img src={movie.Poster} alt={movie.Title}/>
+            <img src={Poster!== "N/A" ? Poster : posterNA } alt={Title}/>
         </div>
         <div className="movie-info">
-            <h3>{movie.Title}</h3>
-            <span>{movie.Type}</span>
+            <h3>{Title}</h3>
+            <span>{Type}</span>
         </div>
         
     </div>
