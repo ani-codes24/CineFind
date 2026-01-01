@@ -3,7 +3,8 @@ import './App.css'
 import SearchIcon from './assets/search.svg'
 import MovieCard from './MovieCard.jsx'
 
-const API_URL = 'http://www.omdbapi.com/?apikey=3ac549ae'
+// const API_URL = 'http://www.omdbapi.com/?apikey=3ac549ae'
+const apiKey = import.meta.env.VITE_OMDB_API_KEY; //ready for deploy in vercel
 
 function App() {
 
